@@ -17,7 +17,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <script type="text/javascript" src="https://datn20191.herokuapp.com/wp-content/themes/center-for-data-and-computation-technologies/vendor/bootstrap.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/1.js"></script>
+    <script type="text/javascript" src="https://datn20191.herokuapp.com/wp-content/themes/center-for-data-and-computation-technologies/1.js"></script>
+    <script type="text/javascript" src="https://datn20191.herokuapp.com/wp-includes/js/wp-emoji-release.min.js?ver=5.2.4"></script>
+    <link rel="stylesheet" href="https://datn20191.herokuapp.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.4">
     <link rel="stylesheet" href="https://datn20191.herokuapp.com/wp-content/themes/center-for-data-and-computation-technologies/vendor/bootstrap.css">
     <link rel="stylesheet" href="https://datn20191.herokuapp.com/wp-content/themes/center-for-data-and-computation-technologies/vendor/font-awesome.css">
     <link rel="stylesheet" href="https://datn20191.herokuapp.com/wp-content/themes/center-for-data-and-computation-technologies/1.css">
