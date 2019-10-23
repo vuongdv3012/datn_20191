@@ -16,11 +16,11 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/vendor/bootstrap.js"></script>
+    <script type="text/javascript" src="https://datn20191.herokuapp.com/wp-content/themes/center-for-data-and-computation-technologies/vendor/bootstrap.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/1.js"></script>
-    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/vendor/bootstrap.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/vendor/font-awesome.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/1.css">
+    <link rel="stylesheet" href="https://datn20191.herokuapp.com/wp-content/themes/center-for-data-and-computation-technologies/vendor/bootstrap.css">
+    <link rel="stylesheet" href="https://datn20191.herokuapp.com/wp-content/themes/center-for-data-and-computation-technologies/vendor/font-awesome.css">
+    <link rel="stylesheet" href="https://datn20191.herokuapp.com/wp-content/themes/center-for-data-and-computation-technologies/1.css">
     <?php wp_head(); ?>
 </head>
 
@@ -29,6 +29,7 @@
     $logo = get_theme_mod('custom_logo');
     $custom_logo_up = wp_get_attachment_image_src($logo, 'full');
 ?>
+<?php bloginfo('template_directory')  ?>
     <div class="thanhcc text-xs-center text-sm-left wow bounceInDown">
         <div class="container">
             <div class="row">
