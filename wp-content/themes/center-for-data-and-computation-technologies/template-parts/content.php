@@ -13,12 +13,12 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">11', '</h1>' );
+			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) :
+		if ( 'post' === get_post_type('post') ) :
 			?>
 			<div class="entry-meta">
 				<?php
@@ -29,7 +29,6 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php center_for_data_and_computation_technologies_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

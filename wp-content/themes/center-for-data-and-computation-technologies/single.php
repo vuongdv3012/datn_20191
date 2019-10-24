@@ -16,16 +16,16 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
-			if(get_post_type()=='post'){
-				echo "Postt";
+			if (get_post_type()=='post'){
+				get_template_part( 'template-parts/content-post', get_post_type('') );
 			} else if ( get_post_type() == 'dich_vu_page') {
 				echo 'Dich vu';
-			} else {
+			} else if (get_post_type() == 'about_us'){
 				echo "gioi thieu";	
+			} else {
+				get_template_part( 'template-parts/content', get_post_type('') );
 			}
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation();
+			//the_post_navigation();
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -39,5 +39,4 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
