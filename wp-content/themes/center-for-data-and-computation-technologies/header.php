@@ -33,11 +33,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <a href="#" class="cctop">
+                    <a href="/?page_id=295" class="cctop">
                         <i class="fa fa-sign-in"></i>
                         Regist
                     </a>
-                    <a href="#" class="cctop">
+                    <a href="/?page_id=299" class="cctop">
                         My Account
                     </a>
                 </div>
