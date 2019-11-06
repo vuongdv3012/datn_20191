@@ -282,7 +282,7 @@ section.feature_part { padding: 80px 0px; }
     -webkit-transition: 1s;
     transition: 1s;
 }
-.feature_part .single_feature_part span img { width: 25px; }
+.feature_part .single_feature_part span img {width: 100%;border-radius: 50%;}
 .feature_part .single_feature_part h4 {
     font-weight: 600;
     font-size: 20px;

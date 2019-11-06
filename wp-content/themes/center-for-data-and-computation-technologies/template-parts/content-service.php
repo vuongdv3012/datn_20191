@@ -1,3 +1,4 @@
+    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/content-service.css">
     <section class="breadcrumb breadcrumb_bg" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>');">
         <div class="container">
             <div class="row">
@@ -27,6 +28,40 @@
                     <div>
                         <?php the_content(); ?>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-3-container section-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col section-3 section-description wow fadeIn">
+                        <h2>Other services</h2>
+                        <div class="divider-1 wow fadeInUp"><span></span></div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <?php
+                        $data_Services = new WP_Query(array('post_type' => 'dich_vu_page', 'posts_per_page' => 4, 'orderby' => 'rand'));
+                            while ( $data_Services->have_posts() ) :
+                            $data_Services->the_post();
+                    ?>
+                    <div class="col-md-6 section-3-box wow fadeInLeft">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3><?php the_title(); ?></h3>
+                                <p>
+                                    <?php the_excerpt(); ?>
+                                </p>
+                                <a href="<?php the_permalink(); ?>" class="boxed-btn" style="padding: 15px 24px; font-size: 12px;">View More <i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                        endwhile; // End of the loop.
+                        wp_reset_query();
+                    ?>
                 </div>
             </div>
         </div>

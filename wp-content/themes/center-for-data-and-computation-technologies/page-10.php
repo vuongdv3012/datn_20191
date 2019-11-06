@@ -1,6 +1,7 @@
 <?php
     get_header();
 ?>
+    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/about-carousel.css">
     <section class="breadcrumb breadcrumb_bg" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>');">
         <div class="container">
             <div class="row">
@@ -165,5 +166,32 @@
             ?>
         </div>
     </div> <!-- end khoi my team-->
+
+    <div class="top-content">
+        <div class="center gap fade-down section-heading no-display animated fadeInDown appear">
+            <h2 class="main-title">Ours Main Client</h2>
+            <hr>
+        </div>
+        <div class="container-fluid">
+            <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                    <?php
+                        $count_client = 1;
+                        $data_Main_Client = new WP_Query(array('post_type' => 'main_client'));
+                            while ( $data_Main_Client->have_posts() ) :
+                            $data_Main_Client->the_post();
+                    ?>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 <?php if($count_client === 1) echo 'active'; ?>" style='height: 180px;'>
+                            <a href=""><img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>" class="img-fluid mx-auto d-block" alt="img"></a>
+                        </div>
+                    <?php
+                        $count_client++;
+                        endwhile; // End of the loop.
+                        wp_reset_query();
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php
 get_footer();
