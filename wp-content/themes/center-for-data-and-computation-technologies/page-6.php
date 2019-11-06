@@ -59,7 +59,7 @@
                         <p class="font-condensed heading-subtitle wow-outer"><span class="wow slideInDown" data-wow-delay=".05s" style="visibility: visible; animation-delay: 0.05s; animation-name: slideInDown;"><?php echo get_field('cau_sologan'); ?></span></p>
                         <p class="font-roboto wow-outer"><span class="wow slideInDown" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: slideInDown;"><?php echo get_field('cau_gioi_thieu'); ?></span></p>
                         <div class="wow-outer button-outer">
-                            <a class="button button-lg button-black-outline button-winona wow slideInDown" data-wow-delay=".1s" href="about-us.html" style="visibility: visible; animation-delay: 0.1s; animation-name: slideInDown;">
+                            <a class="button button-lg button-black-outline button-winona wow slideInDown" data-wow-delay=".1s" href="<?php echo get_field('duong_dan_url')['url'];?>" style="visibility: visible; animation-delay: 0.1s; animation-name: slideInDown;">
                                 <div class="content-original"><?php echo get_field('tit_nut'); ?></div><div class="content-dubbed"><?php echo get_field('tit_nut'); ?></div>
                             </a>
                         </div>

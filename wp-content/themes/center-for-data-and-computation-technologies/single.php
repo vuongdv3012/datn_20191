@@ -19,9 +19,9 @@ get_header();
 			if (get_post_type()=='post'){
 				get_template_part( 'template-parts/content-post', get_post_type('') );
 			} else if ( get_post_type() == 'dich_vu_page') {
-				echo 'Dich vu';
+				get_template_part( 'template-parts/content-service', get_post_type('') );
 			} else if (get_post_type() == 'about_us'){
-				echo "gioi thieu";	
+				get_template_part( 'template-parts/content-about', get_post_type('') );	
 			} else {
 				get_template_part( 'template-parts/content', get_post_type('') );
 			}

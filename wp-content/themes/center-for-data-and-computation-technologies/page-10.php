@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                     <div>
                         <?php if ( have_posts() ) {
                             the_post();
@@ -35,16 +35,20 @@
                         } ?>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="row">Taif lieu, Van banf</div>
+                <div class="col-lg-3" style="margin-left: 1px #777 solid;">
+                    <div class="row center"><p style="width: 100%;"><strong>Tài liệu, văn bản(Download)</strong></p></div>
                     <div class="row">
-                        <ul>
-                            <li><a href="">Taif lieu 1</a></li>
-                            <li><a href="">Vanw ban 1</a></li>
-                            <li><a href="">Taif lieu 1</a></li>
-                            <li><a href="">Vanw ban 1</a></li>
-                            <li><a href="">Taif lieu 1</a></li>
-                            <li><a href="">Vanw ban 1</a></li>
+                        <ul class="list-group tai_lieu">
+                            <?php
+                                $data_Documents = new WP_Query(array('post_type' => 'document'));
+                                    while ( $data_Documents->have_posts() ) :
+                                        $data_Documents->the_post();
+                            ?>
+                            <li class="list-group-item"><a href="<?php echo get_field('upload_document')['url']; ?>"><?php the_title(); ?></a></li>
+                            <?php
+                                endwhile; // End of the loop.
+                                wp_reset_query();
+                            ?>
                         </ul>
                     </div>
                 </div>
