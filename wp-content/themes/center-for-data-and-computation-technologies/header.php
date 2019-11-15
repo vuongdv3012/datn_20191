@@ -40,6 +40,12 @@
                     <a href="/?page_id=299" class="cctop">
                         My Account
                     </a>
+                    <?php pll_the_languages(
+                        array(
+                            'show_flags' => 1,
+                            //'dropdown' => 1
+                        )
+                    ); ?>
                 </div>
                 <div class="col-sm-6">
                     <div class="text-xs-center text-sm-left float-sm-right">

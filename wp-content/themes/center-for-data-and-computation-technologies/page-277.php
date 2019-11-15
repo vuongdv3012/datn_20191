@@ -9,7 +9,7 @@
                     <div class="breadcrumb_iner text-center">
                         <div class="breadcrumb_iner_item">
                             <h2><?php the_title(); ?></h2>
-                            <p>Home &nbsp; <span>//</span> &nbsp; <?php the_title(); ?></p>
+                            <p>Trang chủ &nbsp; <span>//</span> &nbsp; <?php the_title(); ?></p>
                         </div>
                     </div>
                 </div>
@@ -39,12 +39,12 @@
                             <div class="noidungtin">
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <div class="thongsotin">
-                                    <span class="author">By <?php echo get_the_author(); ?></span> / <span class="comment-count"><?php echo get_comments_number(); ?> Comment</span> / <span><?php echo get_the_category()['0']->name; ?></span>
+                                    <span class="author">Đăng bởi <?php echo get_the_author(); ?></span> / <span class="comment-count"><?php echo get_comments_number(); ?> Bình luận</span> / <span><?php echo get_the_category()['0']->name; ?></span>
                                 </div>
                                 <div class="trichdan">
                                     <?php the_excerpt(); ?>
                                 </div>
-                                <a href="<?php the_permalink(); ?>" class="rmtin">Read More <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="<?php the_permalink(); ?>" class="rmtin">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     <?php
@@ -60,11 +60,11 @@
 
                 <div class="col-sm-3 wow fadeInRight">
                     <form action="" class="search-form">
-                        <input type="text" class="search-field" placeholder="Tim kiem">
+                        <input type="text" class="search-field" placeholder="Tìm kiếm">
                         <input type="submit" class="search-submit">
                     </form>
                     <div class="widget wow fadeInUp">
-                        <h2 class="widget-title">Danh muc tin</h2>
+                        <h2 class="widget-title">Danh mục tin tức</h2>
                         <ul>
                             <?php 
                                 $data_categorys = get_categories();
@@ -75,7 +75,7 @@
                     </div>
 
                     <div class="widget widget_recent_entries wow fadeInRight">
-                        <h2 class="widget-title">Recent News</h2>
+                        <h2 class="widget-title">Tin mới nhất</h2>
                         <?php
                             $new_recent = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 5));
                             while ( $new_recent->have_posts() ) :

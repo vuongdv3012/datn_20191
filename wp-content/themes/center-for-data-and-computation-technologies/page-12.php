@@ -8,7 +8,7 @@
                     <div class="breadcrumb_iner text-center">
                         <div class="breadcrumb_iner_item">
                             <h2><?php the_title(); ?></h2>
-                            <p>Home &nbsp; <span>//</span> &nbsp; <?php the_title(); ?></p>
+                            <p>Trang chủ &nbsp; <span>//</span> &nbsp; <?php the_title(); ?></p>
                         </div>
                     </div>
                 </div>
@@ -21,8 +21,8 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section_title mb-60">
-                        <span class="sub_heading">Project view</span>
-                        <h3>Our Projects</h3>
+                        <span class="sub_heading"><?php the_title(); ?></span>
+                        <h3>Dịch vụ cung cấp</h3>
                         <div class="seperator"></div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                         <div class="section_title">
                             <h4><?php the_title(); ?></h4>
                             <p><?php the_excerpt(); ?></p>
-                            <a href="<?php the_permalink(); ?>" class="boxed-btn">View More <i class="fa fa-long-arrow-right"></i></a>
+                            <a href="<?php the_permalink(); ?>" class="boxed-btn">Xem thêm <i class="fa fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                         <div class="section_title">
                             <h4><?php the_title(); ?></h4>
                             <p><?php the_excerpt(); ?></p>
-                            <a href="<?php the_permalink(); ?>" class="boxed-btn">View More <i class="fa fa-long-arrow-right"></i></a>
+                            <a href="<?php the_permalink(); ?>" class="boxed-btn">Xem thêm <i class="fa fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-xl-5 offset-xl-1 col-md-6">
@@ -85,9 +85,7 @@
                     <div class="col-sm-8 push-sm-2">
                         <div class="text-xs-center">
                             <h2 class="heading-29190">Testimonial</h2>
-                            <p class="mota">
-                                Happy Clients
-                            </p>
+                            <p class="mota">Khách hàng hạnh phúc</p>
                         </div>
                     </div>
                 </div>
@@ -121,11 +119,9 @@
                 </div>
                 <a class="left carousel-control" href="#slidecamnhan" role="button" data-slide="prev">
                     <span class="icon-prev" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
                 </a>
                 <a class="right carousel-control" href="#slidecamnhan" role="button" data-slide="next">
                     <span class="icon-next" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
                 </a>
             </div>
         </div>

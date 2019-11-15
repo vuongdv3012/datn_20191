@@ -37,15 +37,12 @@
                     endwhile; // End of the loop.
                     wp_reset_query();
                 ?>
-
             </div>
             <a class="left carousel-control" href="#slidetrangchu" role="button" data-slide="prev">
                 <span class="icon-prev" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
             </a>
             <a class="right carousel-control" href="#slidetrangchu" role="button" data-slide="next">
                 <span class="icon-next" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
             </a>
         </div>
     </div> <!-- End div slide Home -->
@@ -89,7 +86,7 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-7 mx-auto text-center">
-                    <h2 class="heading-29190">Our Services</h2>
+                    <h2 class="heading-29190">Giới thiệu</h2>
                 </div>
             </div>
             <div class="row">
@@ -210,11 +207,9 @@
             </div>
             <a class="left carousel-control" href="#slidecamnhan" role="button" data-slide="prev">
                 <span class="icon-prev" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
             </a>
             <a class="right carousel-control" href="#slidecamnhan" role="button" data-slide="next">
                 <span class="icon-next" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
             </a>
         </div>
     </div> <!-- End div comment home -->
@@ -235,13 +230,11 @@
                     <?php
                         //Get dữ liệu custom type
                         $data_slide = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 2));
-                        //$count_new = 0;
                         while ( $data_slide->have_posts() ) :
                             $data_slide->the_post();
-                            //if ( $count_new < 2) {
                     ?>
                         <div class="col-sm-6">
-                            <a href="" class="anhtin">
+                            <a href="<?php the_permalink(); ?>" class="anhtin">
                                 <?php the_post_thumbnail(); ?>
                                 <div class="ngaythang">
                                     <b><?php echo get_the_date('d', get_the_ID()); ?></b>
@@ -251,12 +244,10 @@
                             <div class="ndtin">
                                 <a href="<?php the_permalink(); ?>" class="td1tin"><?php the_title(); ?></a>
                                 <p><?php the_excerpt(); ?></p>
-                                <a href="<?php the_permalink(); ?>" class="rm">Read More <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="<?php the_permalink(); ?>" class="rm">Chi tiết <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     <?php
-                            //}
-                        //$count_new++;
                         endwhile;
                         wp_reset_query();
                     ?>
@@ -268,12 +259,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-10 push-xs-1 text-xs-center">
-                    <?php Ninja_Forms()->form( 1 )->get(); ?>
-                    <h2 class="1">SUBSCRIBE to our newsletters</h2>
-                    <p>Be the First to know about our Fresh Arrivals and much more!</p>
+                    <!-- <?php Ninja_Forms()->form( 1 )->get(); ?> -->
+                    <h2 class="1">SUBSCRIBE để nhận tin tức mới</h2>
+                    <p>Hãy là người đầu tiên biết thông tin về chúng tôi và nhiều hơn nữa!</p>
                     <div class="form">
-                        <input type="text" class="form-control nhanmail" placeholder="Enter your email ID">
-                        <input type="submit" class="form-cotrol" value="SUBSCRIBE">
+                        <input type="text" class="form-control nhanmail" placeholder="Địa chỉ email của bạn">
+                        <input type="submit" class="form-cotrol" value="Theo dỗi">
                     </div>
                 </div>
             </div>

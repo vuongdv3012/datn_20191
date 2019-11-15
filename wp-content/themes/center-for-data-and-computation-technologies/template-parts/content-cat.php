@@ -1,12 +1,29 @@
+<?php 
+    $text1 = 'Tìm kiếm';
+    $text2 = 'Danh mục tin';
+    $text3 = 'Tin mới nhất';
+    $text4 = 'Tác giả';
+    $text5 = 'Bình luận';
+    $text6 = 'Đọc thêm';
+    $text7 = 'Bài cũ';
+    $text8 = 'Bài tiếp';
+    if (isset($_GET['lang']) && $_GET['lang'] == 'en') {
+        $text1 = 'Search';
+        $text2 = 'List New';
+        $text3 = 'Recent New';
+        $text4 = 'Auth';
+        $text5 = 'Comment';
+        $text6 = 'Read more';
+        $text7 = 'Older posts';
+        $text8 = 'Next posts';
+    }
+?>
 <!-- Noi dung trang tin -->
     <div class="tintuc">
         <div class="container">
             <div class="row">
                 <div class="col-sm-9">
                     <?php
-                        // $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        // $args = array('posts_per_page' => 2, 'paged' => $paged );
-                        // $data_news = query_posts($args);
                         while ( have_posts() ) :
                             the_post();
                     ?>
@@ -21,19 +38,19 @@
                             <div class="noidungtin">
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <div class="thongsotin">
-                                    <span class="author">By <?php echo get_the_author(); ?></span> / <span class="comment-count"><?php echo get_comments_number(); ?> Comment</span> / <span><?php echo get_the_category()['0']->name; ?></span>
+                                    <span class="author"><?php echo $text4;?> <?php echo get_the_author(); ?></span> / <span class="comment-count"><?php echo get_comments_number(); ?> <?php echo $text5;?></span> / <span><?php echo get_the_category()['0']->name; ?></span>
                                 </div>
                                 <div class="trichdan">
                                     <?php the_excerpt(); ?>
                                 </div>
-                                <a href="<?php the_permalink(); ?>" class="rmtin">Read More <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="<?php the_permalink(); ?>" class="rmtin"><?php echo $text6;?> <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     <?php
                         endwhile;
                     ?>
-                        <div class="nav-previous alignleft"><?php echo previous_posts_link( 'Older posts' ); ?></div>
-                        <div class="nav-next alignright"><?php next_posts_link( 'Next posts' ); ?></div>
+                        <div class="nav-previous alignleft"><?php echo previous_posts_link( $text7 ); ?></div>
+                        <div class="nav-next alignright"><?php next_posts_link( $text8 ); ?></div>
                     <?php 
                         wp_reset_query();
                     ?>
@@ -42,11 +59,11 @@
 
                 <div class="col-sm-3 wow fadeInRight">
                     <form action="" class="search-form">
-                        <input type="text" class="search-field" placeholder="Tim kiem">
+                        <input type="text" class="search-field" placeholder="<?php echo $text1; ?>">
                         <input type="submit" class="search-submit">
                     </form>
                     <div class="widget wow fadeInUp">
-                        <h2 class="widget-title">Danh muc tin</h2>
+                        <h2 class="widget-title"><?php echo $text2; ?></h2>
                         <ul>
                             <?php 
                                 $data_categorys = get_categories();
@@ -57,7 +74,7 @@
                     </div>
 
                     <div class="widget widget_recent_entries wow fadeInRight">
-                        <h2 class="widget-title">Recent News</h2>
+                        <h2 class="widget-title"><?php echo $text3; ?></h2>
                         <?php
                             $new_recent = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 5));
                             while ( $new_recent->have_posts() ) :

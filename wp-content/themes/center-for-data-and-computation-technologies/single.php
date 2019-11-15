@@ -20,7 +20,7 @@ get_header();
 				get_template_part( 'template-parts/content-post', get_post_type('') );
 			} else if ( get_post_type() == 'dich_vu_page') {
 				get_template_part( 'template-parts/content-service', get_post_type('') );
-			} else if (get_post_type() == 'about_us'){
+			} else if (get_post_type() == 'about_us' || get_post_type() == 'about_us_en'){
 				get_template_part( 'template-parts/content-about', get_post_type('') );	
 			} else {
 				get_template_part( 'template-parts/content', get_post_type('') );

@@ -15,12 +15,12 @@
                     <div class="signin-form">
                         <h2 class="form-title"><?php the_title(); ?></h2>
                         <div class="form-group">
-                            <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="your_name" id="your_name" placeholder="Your Name"/>
+                            <input type="email" name="your_email" id="your_email" placeholder="AddressEmail"/>
+                            <p class="your_email"> <i class="fa fa-star-o"></i> Email address does not match</p>
                         </div>
                         <div class="form-group">
-                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
                             <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
+                            <p class="your_pass"> <i class="fa fa-star-o"></i> Enter Your Password</p>
                         </div>
                         <div class="form-group form-button">
                             <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>

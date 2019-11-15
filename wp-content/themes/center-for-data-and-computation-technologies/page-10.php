@@ -9,19 +9,20 @@
                     <div class="breadcrumb_iner text-center">
                         <div class="breadcrumb_iner_item">
                             <h2><?php the_title(); ?></h2>
-                            <p>Home &nbsp; <span>//</span> &nbsp; <?php the_title(); ?></p>
+                            <p>Trang chủ &nbsp; <span>//</span> &nbsp; <?php the_title(); ?></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section> <!-- end khoi tieu de duoi -->
+
     <div class="lastest_project">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section_title mb-60">
-                        <span class="sub_heading">About us view</span>
+                        <span class="sub_heading">Về chúng tôi</span>
                         <h3>Giới thiệu CDCT_@HUST Việt Nam</h3>
                         <div class="seperator"></div>
                     </div>
@@ -77,7 +78,7 @@
                     <div class="our_ability_member_text">
                         <h2><?php the_title(); ?></h2>
                         <p><?php the_excerpt(); ?></p>
-                        <a href="<?php the_permalink(); ?>" class="btn_2">read more <i class="fa fa-long-arrow-right"></i></a> 
+                        <a href="<?php the_permalink(); ?>" class="btn_2">Xem thêm <i class="fa fa-long-arrow-right"></i></a> 
                     </div>
                 </div>
                 <?php if (($count_about%2)!=1){ ?>
@@ -169,7 +170,7 @@
 
     <div class="top-content">
         <div class="center gap fade-down section-heading no-display animated fadeInDown appear">
-            <h2 class="main-title">Ours Main Client</h2>
+            <h2 class="main-title">Khách hàng quan trọng của chúng tôi</h2>
             <hr>
         </div>
         <div class="container-fluid">

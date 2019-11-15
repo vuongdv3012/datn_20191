@@ -1,6 +1,5 @@
 jQuery(document).ready( function() {
     //Đăng ký user
-    //$('#input_name_re')
     jQuery("#signup").click( function() {
         status_input = true;
         $('.form-group p').removeClass('warning');
@@ -34,22 +33,53 @@ jQuery(document).ready( function() {
                     password: $('#input_pass_re').val()
                 },
                 success: function(response) {
-                   console.log(response);
+                    if (response == true) {
+                        alert("Sign Up Success!!!");
+                    } else if (response == 'Email') {
+                        alert("Email already exists!!");
+                    } else if (response == false) {
+                        alert("Sign Up Not Success!");
+                    }
                 }
             });
         }
    });
 
-   //Request đăng nhập
-   jQuery("#signin").click( function() {
-      jQuery.ajax({
-         type : "post",
-         dataType : "json",
-         url : myAjax.ajaxurl,
-         data : {action: "my_user_like"},
-         success: function(response) {
-            console.log(response);
-         }
-      });
+    //Request đăng nhập
+    jQuery("#signin").click( function() {
+        $('.form-group p').removeClass('warning');
+        status_input = true;
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        if(!$('#your_email').val() || !emailReg.test( $('#your_email').val()) ) {
+            $('.your_email').addClass('warning');
+            status_input = false;
+        }
+        if( !$('#your_pass').val() ) {
+            $('.your_pass').addClass('warning');
+            status_input = false;
+        }
+        if (status_input === true) {
+            jQuery.ajax({
+                type : "post",
+                dataType : "json",
+                url : myAjax.ajaxurl,
+                data : {
+                    action: "login_user",
+                    email:  $('#your_email').val(),
+                    password: $('#your_pass').val(),
+                },
+                success: function(response) {
+                    if (response == true) {
+                        alert("Login Success!!!");
+                        window.location.replace('/');
+                    } else if (response == 'wrong') {
+                        alert('Wrong PassWord');
+                    } else {
+                        alert('Email Have Not Sign Up');
+                    }
+                }
+            });
+        }
    });
+
 });
