@@ -11,28 +11,28 @@
                     <div class="signup-form">
                         <h2 class="form-title"><?php the_title(); ?></h2>
                         <div class="form-group">
-                            <input type="text" name="name" id="input_name_re" placeholder="UserName"/>
-                            <p class="input_name_re"> <i class="fa fa-star-o"></i> Nhập tài tên tài khoản</p>
+                            <input type="text" name="name" id="input_name_re" placeholder="Your Name"/>
+                            <p class="input_name_re"> <i class="fa fa-star-o"></i> Enter Your Name</p>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" id="input_email_re" placeholder="Địa chỉ Email"/>
-                            <p class="input_email_re"> <i class="fa fa-star-o"></i> Địa chỉ email không hợp lệ</p>
+                            <input type="email" name="email" id="input_email_re" placeholder="Your Email"/>
+                            <p class="input_email_re"> <i class="fa fa-star-o"></i> Email address does not match</p>
                         </div>
                         <div class="form-group">
-                            <input type="password" name="pass" id="input_pass_re" placeholder="Mật Khẩu"/>
-                            <p class="input_pass_re"> <i class="fa fa-star-o"></i> Không được để trống mật khẩu</p>
+                            <input type="password" name="pass" id="input_pass_re" placeholder="Password"/>
+                            <p class="input_pass_re"> <i class="fa fa-star-o"></i> Passwork Empty</p>
                         </div>
                         <div class="form-group">
                             <input type="password" name="re_pass" id="input_re_pass_re" placeholder="Repeat your password"/>
-                            <p class="input_re_pass_re"> <i class="fa fa-star-o"></i> Hai mật khẩu không khớp</p>
+                            <p class="input_re_pass_re"> <i class="fa fa-star-o"></i> The two passwords do not match</p>
                         </div>
                         <div class="form-group form-button">
-                            <input type="submit" name="signup" id="signup" class="form-submit" value="Đăng Ký"/>
+                            <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
                         </div>
                     </div>
                     <div class="signup-image">
                         <figure><img src="<?php bloginfo('template_directory') ?>/images/signup-image.jpg" alt="sing up image"></figure>
-                        <a href="/?page_id=297" class="signup-image-link">Tôi đã là một thành viên</a>
+                        <a href="/?page_id=537" class="signup-image-link">I am already member</a>
                     </div>
                 </div>
             </div>

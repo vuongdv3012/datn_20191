@@ -10,6 +10,22 @@
  */
 
 ?>
+<?php
+    $text1 = 'Đăng ký';
+    $text2 = 'Đăng nhập';
+    $text3 = 'Tài khoản';
+    $text4 = 'Tìm kiếm';
+    $url1 = '/?page_id=295';
+    $url2 = '/?page_id=299';
+    if (isset($_GET['lang']) && $_GET['lang'] == 'en') {
+        $text1 = 'Registration';
+        $text2 = 'Login';
+        $text3 = 'My Account';
+        $text4 = 'Search';
+        $url1 = '/?page_id=535';
+        $url2 = '/?page_id=466';
+    }
+?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -33,12 +49,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <a href="/?page_id=295" class="cctop">
+                    <a href="<?php echo $url1; ?>" class="cctop">
                         <i class="fa fa-sign-in"></i>
-                        Regist
+                        <?php echo $text1; ?>
                     </a>
-                    <a href="/?page_id=299" class="cctop">
-                        My Account
+                    <a href="<?php echo $url2; ?>" class="cctop">
+                        <?php echo $text3; ?>
                     </a>
                     <?php pll_the_languages(
                         array(
@@ -49,7 +65,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="text-xs-center text-sm-left float-sm-right">
-                        <input type="text" class="form-control tim" placeholder="Search">
+                        <input type="text" class="form-control tim" placeholder="<?php echo $text4; ?>">
                     </div>
                 </div>
             </div>
